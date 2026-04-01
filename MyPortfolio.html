@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taiba Dilshad | Portfolio</title>
     <style>
-     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
         
         * {
             margin: 0;
@@ -16,7 +16,7 @@
         }
 
         body {
-            color: #444; /* Darker text for readability on light sections */
+            color: #444;
             background-color: #0b0b0b;
             line-height: 1.7;
         }
@@ -42,7 +42,7 @@
         }
 
         .Intro h3 {
-            color: #ff4d4d; /* Accent color for the subhead */
+            color: #ff4d4d;
             font-weight: 600;
             font-size: 11px;
             text-transform: uppercase;
@@ -104,21 +104,22 @@
             background-color: #ffffff;
         }
 
-        h2.section-title {
+        .section-title {
             font-size: 36px;
             margin-bottom: 40px;
             color: #111;
             font-weight: 700;
             position: relative;
+            display: inline-block; /* Changed to allow centering line */
         }
 
-        h2.section-title::after {
+        .section-title::after {
             content: '';
             display: block;
             width: 60px;
             height: 4px;
             background: #ff4d4d;
-            margin-top: 10px;
+            margin: 10px auto 0; /* Centered the line */
             border-radius: 2px;
         }
 
@@ -149,15 +150,20 @@
 
         .about-image img:hover { filter: grayscale(0%); }
 
-        .about-me { flex: 1.5; min-width: 300px; }
+        .about-me { flex: 1.5; min-width: 300px; text-align: left; }
 
         /* --- Skills --- */
+        #skills { text-align: center; }
+
         .skill-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 12px;
             margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .skill-tag {
@@ -192,6 +198,9 @@
             border: 1px solid #eee;
             transition: 0.4s;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .project-card:hover {
@@ -247,107 +256,75 @@
             margin-bottom: 10px;
         }
 
-        /* --- Button --- */
+        /* --- Buttons & Links --- */
         .btn {
             display: inline-block;
             background: #ff4d4d;
             color: #fff;
-            padding: 14px 30px;
+            padding: 12px 25px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
             transition: 0.3s;
+            margin-top: 15px;
         }
-
 
         .btn:hover { background: #e04343; transform: scale(1.05); }
 
-      .smartcalc-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-    border: 1px solid #ff4d4d; /* Subtle highlight */
-}
+        .project-link {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
 
-.tech-pill {
-    display: inline-block;
-    background: #f0f0f0;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    margin: 5px;
-    color: #555;
-}
+        /* --- Footer --- */
+        footer {
+            background-color: #080808;
+            color: #ffffff;
+            padding: 80px 0 40px 0;
+            text-align: center;
+        }
 
-/* --- Professional Footer --- */
-footer {
-    background-color: #080808;
-    color: #ffffff;
-    padding: 80px 0 40px 0;
-    text-align: center;
-}
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ff4d4d;
+            margin-bottom: 30px;
+        }
 
-.footer-logo {
-    font-size: 32px;
-    font-weight: 700;
-    color: #ff4d4d;
-    margin-bottom: 30px;
-}
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 50px;
-}
+        .footer-link {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            position: relative;
+        }
 
-.footer-link {
-    color: #a0a0a0;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
-    position: relative;
-}
+        .footer-link:hover { color: #fff; }
 
-.footer-link:hover {
-    color: #fff;
-}
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            margin: 20px 10% 0;
+        }
 
-.footer-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: #ff4d4d;
-    transition: 0.3s;
-}
+        .copyright { font-size: 14px; color: #666; }
+        .tagline { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #444; margin-top: 10px; }
 
-.footer-link:hover::after {
-    width: 100%;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
-    margin-top: 20px;
-}
-
-.copyright {
-    font-size: 14px;
-    color: #666;
-}
-
-.tagline {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #444;
-    margin-top: 10px;
-}
     </style>
 </head>
 <body>
- <nav>
+
+    <nav>
         <div class="Intro">
             <h1>Taiba Dilshad</h1>
             <h3>BSc IT Student | Amity University</h3>
@@ -369,7 +346,7 @@ footer {
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-image">
-                <img src="new.jpg.png" alt="Taiba Dilshad">
+                <img src="Screenshot 2026-04-01 233720.png" alt="Taiba Dilshad">
             </div>
             <div class="about-me">
                 <h2 class="section-title">About Me</h2>
@@ -380,7 +357,7 @@ footer {
     </section>
 
     <section id="skills">
-        <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Technical Skills</h2>
+        <h2 class="section-title">Technical Skills</h2>
         <div class="skill-container">
             <span class="skill-tag">HTML5</span>
             <span class="skill-tag">CSS3</span>
@@ -396,27 +373,29 @@ footer {
         <h2 class="section-title">Featured Work</h2>
         <div class="work-container">
             <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>A personal portfolio designed to showcase my journey and technical projects.</p>
-                <div class="tech-stack">
-                    <span class="tech-pill">HTML5</span>
-                    <span class="tech-pill">CSS3</span>
+                <div>
+                    <h3>Portfolio Website</h3>
+                    <p>A personal portfolio designed to showcase my journey and technical projects.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">HTML5</span>
+                        <span class="tech-pill">CSS3</span>
+                    </div>
                 </div>
-                <a href="taiba cv.pdf" download="Taiba_Dilshad_Resume" class="btn">Download Resume</a>
+                <a href="#" class="project-link">View Project →</a>
             </div>
 
             <div class="project-card">
-                <h3>SmartCalc</h3>
-                <p>A high-performance calculator app featuring Glassmorphism design and custom JS logic.</p>
-                <div class="tech-stack">
-                    <span class="tech-pill">JavaScript</span>
-                    <span class="tech-pill">HTML</span>
-                    <span class="tech-pill">CSS</span>
+                <div>
+                    <h3>SmartCalc</h3>
+                    <p>A high-performance calculator app featuring Glassmorphism design and custom JS logic.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">HTML</span>
+                        <span class="tech-pill">CSS</span>
+                    </div>
                 </div>
-                <a href="#" class="link" style="color:#ff4d4d; text-decoration: none; font-weight: bold;">View Project →</a>
+                <a href="#" class="project-link">View Project →</a>
             </div>
-
-            
         </div>
     </section>
 
@@ -431,28 +410,24 @@ footer {
             </div>
         </div>
         <div style="margin-top: 30px;">
-            <a href="" download class="btn">Download Resume</a>
+            <a href="taiba cv.pdf" download="Taiba_Dilshad_Resume" class="btn">Download Full Resume</a>
         </div>
     </section>
-        </section>
 
-
-<footer>
-    <div class="container">
-        <h2 class="footer-logo">Let's Connect</h2>
-        
-        <div class="footer-links">
-            <a href="mailto:yourname@email.com" class="footer-link">Email</a>
-            <a href="#" class="footer-link">LinkedIn</a>
-            <a href="#" class="footer-link">GitHub</a>
+    <footer>
+        <div class="container">
+            <h2 class="footer-logo">Let's Connect</h2>
+            <div class="footer-links">
+                <a href="mailto:yourname@email.com" class="footer-link">Email</a>
+                <a href="https://www.linkedin.com/in/taiba-dilshad-926202285/" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/Taiba-dilshad" class="footer-link">GitHub</a>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Taiba Dilshad. All Rights Reserved.</p>
+                <p class="tagline">Innovating through code</p>
+            </div>
         </div>
-
-        <div class="footer-bottom">
-            <p class="copyright">&copy; 2026 Taiba Dilshad. All Rights Reserved.</p>
-            <p class="tagline">Innovating through code</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
